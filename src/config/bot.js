@@ -9,27 +9,17 @@ export const botConfig = {
   // - "idle"      = yellow moon
   // - "dnd"       = red do-not-disturb
   // - "invisible" = appears offline
-  presence: {
-    // Current online state shown on Discord.
-    status: "online",
+ presence: {
+  status: "online",
 
-    // Activity lines shown under the bot name.
-    // `type` number mapping from Discord:
-    // 0 = Playing
-    // 1 = Streaming
-    // 2 = Listening
-    // 3 = Watching
-    // 4 = Custom
-    // 5 = Competing
-    activities: [
-      {
-        name: "Custom Status", // required by Discord API, not shown in the client
-        state: "stalking",     // this is what people actually see
-        type: 4,               // Custom
-      },
-    ],
-  },
-
+  activities: [
+    {
+      name: "Custom Status",
+      state: "⚡ Fury Community",
+      type: 4,
+    },
+  ],
+},
   // =========================
   // COMMAND BEHAVIOR
   // =========================
@@ -92,56 +82,52 @@ export const botConfig = {
   // IMPORTANT: This is the SINGLE SOURCE OF TRUTH for all bot colors
   embeds: {
     colors: {
-      // Main brand colors.
-      primary: "#336699",
-      secondary: "#2F3136",
+  primary: "#FF1744",
+  secondary: "#0B0B0F",
 
-      // Standard status colors for success/error/warning/info messages.
-      success: "#57F287",
-      error: "#ED4245",
-      warning: "#FEE75C",
-      info: "#3498DB",
+  success: "#00E676",
+  error: "#FF1744",
+  warning: "#FFD600",
+  info: "#2979FF",
 
-      // Neutral utility colors.
-      light: "#FFFFFF",
-      dark: "#202225",
-      gray: "#99AAB5",
+  light: "#FFFFFF",
+  dark: "#08080C",
+  gray: "#8B8B98",
 
-      // Discord-style palette shortcuts.
-      blurple: "#5865F2",
-      green: "#57F287",
-      yellow: "#FEE75C",
-      fuchsia: "#EB459E",
-      red: "#ED4245",
-      black: "#000000",
+  blurple: "#7C4DFF",
+  green: "#00E676",
+  yellow: "#FFD600",
+  fuchsia: "#FF4081",
+  red: "#FF1744",
+  black: "#000000",
 
-      // Feature-specific colors.
-      giveaway: {
-        active: "#57F287",
-        ended: "#ED4245",
-      },
-      ticket: {
-        open: "#57F287",
-        claimed: "#FAA61A",
-        closed: "#ED4245",
-        pending: "#99AAB5",
-      },
-      economy: "#F1C40F",
-      birthday: "#E91E63",
-      moderation: "#9B59B6",
+  giveaway: {
+    active: "#FF1744",
+    ended: "#5C5C66",
+  },
 
-      // Ticket priority color mapping.
-      priority: {
-        none: "#95A5A6",
-        low: "#3498db",
-        medium: "#2ecc71",
-        high: "#f1c40f",
-        urgent: "#e74c3c",
-      },
-    },
+  ticket: {
+    open: "#FF1744",
+    claimed: "#FF9100",
+    closed: "#5C5C66",
+    pending: "#FFD600",
+  },
+
+  economy: "#FFD600",
+  birthday: "#FF4081",
+  moderation: "#7C4DFF",
+
+  priority: {
+    none: "#6B6B76",
+    low: "#00C853",
+    medium: "#FFD600",
+    high: "#FF6D00",
+    urgent: "#FF1744",
+  },
+},
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "Fury • Community Bot",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -161,11 +147,11 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "Fury coins",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "Fury coins",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "⚡",
     },
 
     // Starting balance for new users.
@@ -302,10 +288,10 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+  defaultMessage:
+  "🔐 **Fury Verification**\n\nClick the button below to verify and enter the community.",
 
-    // Text on the verification button.
-    defaultButtonText: "Verify",
+defaultButtonText: "⚡ Verify",
 
     // Automatic verification behavior.
     autoVerify: {
@@ -371,12 +357,12 @@ export const botConfig = {
   welcome: {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
-    defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+defaultWelcomeMessage:
+  "🔥 Welcome {user} to **{server}**! You're now part of the Fury family. ⚡",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
-    defaultGoodbyeMessage:
-      "{user} has left the server. We now have {memberCount} members.",
+ defaultGoodbyeMessage:
+  "💨 **{user}** left Fury. We'll see you around.",
     // Channel ID for welcome messages.
     defaultWelcomeChannel: null,
     // Channel ID for goodbye messages.
@@ -433,15 +419,14 @@ export const botConfig = {
   // =========================
   // GENERIC BOT MESSAGES
   // =========================
-  messages: {
-    noPermission: "You do not have permission to use this command.",
-    cooldownActive: "Please wait {time} before using this command again.",
-    errorOccurred: "An error occurred while executing this command.",
-    missingPermissions:
-      "I am missing required permissions to perform this action.",
-    commandDisabled: "This command has been disabled.",
-    maintenanceMode: "The bot is currently in maintenance mode.",
-  },
+ messages: {
+  noPermission: "🚫 You don't have permission to use this, bro.",
+  cooldownActive: "⏳ Chill bro — try again in {time}.",
+  errorOccurred: "💀 Something went wrong. Try again in a moment.",
+  missingPermissions: "⚠️ I need more permissions to do that.",
+  commandDisabled: "🔒 This command is currently disabled.",
+  maintenanceMode: "🛠️ Fury is currently under maintenance.",
+},
 
   // =========================
   // FEATURE TOGGLES
